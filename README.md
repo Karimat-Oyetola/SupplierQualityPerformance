@@ -204,6 +204,7 @@ Key Combinations:
 This combination of materials and vendors points to systemic issues with specific supply chains, particularly for raw materials and corrugates. Addressing these problems with high-risk vendors will be critical to reducing defects and downtime.
 
 #### 4.	Is there a particular combination of Vendor and plant that performs poorly?
+
 Plant Defect                        |           Plant Downtime
 :----------------------------------:|:---------------------------:
  ![](plant_defect.png)              |    ![](plant_downtime.png) 
