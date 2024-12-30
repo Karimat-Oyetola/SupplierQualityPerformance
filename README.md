@@ -36,12 +36,74 @@ The dataset used for this analysis was obtained during my search for comprehensi
   
 This dataset spans two years of operations, offering a comprehensive view of supplier performance and enabling meaningful insights into the impact of defects on production efficiency.
 
-## Data Cleaning & Modeling
+## Data Normalization & Modeling
 The dataset required preprocessing to ensure accuracy and consistency.
 ###### Key steps included:
 - Handled missing values: Ensured no critical data points were missing, addressing gaps in defect quantities or downtime minutes.
 - Standardized Data Formats: Unified inconsistent date formats and standardized categorical values for vendors, plants, and material types.
 - Filtered Relevant Data: Removed outliers and irrelevant entries (e.g. entries with zero defect quantities or downtime).
-![]()
+
+###### Modeling:
+I created primary keys for dimension tables, such as vendors, plants, and material types, to uniquely identify records and enable seamless integration with the fact table. 
+This step ensured a robust data model, allowing accurate connections between dimensional and transactional data, ultimately enhancing the efficiency and reliability of the analysis.
+These steps prepared the data for meaningful analysis, ensuring all insights were derived from high-quality, reliable data.
+
+The model is a star schema. The dimension table are all joined to the fact table with one-to-many relationship.
+
+Data Normalisation                  |            Data Modeling
+:----------------------------------:|:---------------------------:
+![](Cleaning_View.png)              |       ![](Supplier_Model_View.png) 
+
+
+## Visualisation:
+
+The report comprises of 5 pages 
+1. Overview
+2. Vendor Performance
+3. Plant Performance
+4. Material Performance
+5. Impact
+
+You can interact with the report [here](https://app.powerbi.com/view?r=eyJrIjoiNWEyNjI0OGQtNzE4NC00YjRmLTlmNWYtMDdiYjUxMmQxM2NjIiwidCI6ImZmMGYzZTNhLTNlNTMtNDU0Zi1iMmI1LTZjNjg3NTNiOGVlNCJ9)
+
+## Exploratory Analysis:
+An initial exploration revealed critical trends answering the question;
+ 1. Which vendors/plants are causing the greatest defect quantity?
+
+Vendor                              |                Plant
+:----------------------------------:|:---------------------------:
+![](vendor_defect.png)              |       ![](plant_defect.png) 
+                                  
+- Vendors such as Yombu, Avamm, and Meejo contributed disproportionately to defects with Yombu leading list of suppliers with 15.1M defect quantites while Avamm and Meejo has 14.7M and 14.2M respectively.
+- Locations like Hingham, Charles City, and Twin Rocks recorded the highest defect quantities (100M, 99M and 97M respectively)
+
+2. Which vendors/plants are causing the greatest downtime?
+
+Vendor                              |                Plant
+:----------------------------------:|:---------------------------:
+![](vendor_downtime.png)              |       ![](plant_downtime.png) 
+
+Vendors causing the greatest downtime:
+- Avamm (1,165 hours)
+- Izio (1,144 hours)
+- Meetz (1,134 hours)
+
+Plants causing the greatest downtime:
+- Riverside (8.6K hours)
+- Charles City (8.3K hours)
+- Twin Rocks (8.0K hours)
+  
+These vendors and plants represent the largest contributors to operational delays and should be prioritized for quality and process improvement initiatives.
+
+
+
+
+
+
+
+
+
+
+
 
 
