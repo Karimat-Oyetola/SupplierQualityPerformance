@@ -225,7 +225,7 @@ Plant Defect                        |           Plant Downtime
 
 #### 5. How does the same vendor and material perform across different plants?
 
- #### **Performance of the Same Vendor and Material Across Different Plants**
+#### **Performance of the Same Vendor and Material Across Different Plants**
   1. Yombu with Raw Materials:
      - Prescott Plant: Yombu's raw materials contributed to the highest defects and downtime (over 3.2M defects and 11.7K minutes of downtime).
      - Westside Plant: Significant issues as well, with 2.5M defects and 12.3K minutes of downtime.
